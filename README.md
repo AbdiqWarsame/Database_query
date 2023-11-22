@@ -9,9 +9,9 @@ SELECT * FROM Product;
 SELECT Orders.OrderID, Orders.OrderDate, Orders.TotalAmount, Customer.FirstName, Customer.LastName
 FROM Orders 
 JOIN Customer ON Orders.CustomerID = Customer.CustomerID;
-#Calculate the total revenue from all orders:
+# Calculate the total revenue from all orders:
 SELECT SUM(TotalAmount) AS TotalRevenue FROM Orders;
-#Find the best-selling products (highest quantity ordered):
+# Find the best-selling products (highest quantity ordered):
 SELECT ProductID, SUM(Quantity) AS TotalQuantity
 FROM OrderItem
 GROUP BY ProductID
